@@ -8,5 +8,13 @@
   },
   "devDependencies": {
     "tree-sitter-cli": "^0.20.7"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.conf",
+      "file-types": ["conf"],
+      "highlights": ["queries/highlights.scm"],
+      "content-regex": "(Architectures|Components|Package): "
+    }
+  ]
 }
