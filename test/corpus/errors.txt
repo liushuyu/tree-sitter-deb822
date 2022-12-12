@@ -1,0 +1,90 @@
+============================================
+Bad key termination
+============================================
+#this paragraph does not contain a valid key-value pair
+A
+
+---
+
+(source
+    (comment)
+    (ERROR
+    (field_name)))
+
+============================================
+Bad key name
+============================================
+#this line does not contain a valid key name (spaces are not allowed)
+; k: value
+#key name can not start with "-"
+-bad_key_name: value
+
+---
+
+(source
+    (comment)
+    (ERROR
+    (field_name))
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))))
+    (comment)
+      (ERROR
+        (UNEXPECTED '-'))
+      (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))))
+
+============================================
+Bad folded line
+============================================
+key: line 1
+line 2
+recover_now: line 2 1
+
+---
+
+(source
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))))
+    (ERROR
+    (field_name)
+    (field_name))
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))))
+
+============================================
+Bad escaped line
+============================================
+key: line 1
+.
+recover_now: yes
+  
+# ^ contains spaces
+
+---
+
+(source
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))))
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (ERROR
+              (field_name))
+            (field_value))))
+      (comment))

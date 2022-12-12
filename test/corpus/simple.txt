@@ -1,0 +1,31 @@
+============================================
+Basic Configuration
+============================================
+A: B
+C: D d
+key: value
+
+
+K: F
+
+---
+
+(source
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))))
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))))

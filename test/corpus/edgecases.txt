@@ -1,0 +1,90 @@
+============================================
+Strange indentifiers and strange values
+============================================
+#this is a comment, but the following line does not contain a comment:
+0valid~_key;name!: #bullet in the head
+"!#$%&'()*+,-./0123456789;<=>?@": ??????????????????? |
+_^`\[]{}|~: very valid indeed
+escape_line?: .
+no_space!:nospace!!
+
+---
+
+(source
+    (comment)
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (comment)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))))
+
+
+============================================
+Interleaved comments
+============================================
+#normal comment
+Key: Line 1
+#interleaved comment (logical line 1)
+ Line 2
+ Line 3
+#interleaved comment (logical line 3)
+ .
+#interleaved comment (logical line 4)
+ Line 5
+
+---
+(source
+    (comment)
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))
+          (comment)
+          (folded_line)
+          (folded_line)
+          (comment)
+          (escape_line)
+          (comment)
+          (folded_line))))
+
+
+============================================
+Unicode
+============================================
+#Unicode 注释
+# Note that key field can't contain Unicode characters.
+key: 中文值
+key2: Unicode 13 (emoji):🧋
+
+---
+
+(source
+    (comment)
+    (comment)
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))))

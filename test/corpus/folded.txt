@@ -1,0 +1,36 @@
+============================================
+Multiline literals
+============================================
+Key: Line 1
+ Line 2
+ Line 3
+ Line 4
+Key2: Line 1
+ .
+ Line 2
+ Line 3
+ .
+ Line 4
+ .Line 5
+
+---
+
+(source
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))
+          (folded_line)
+          (folded_line)
+          (folded_line))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value))
+          (escape_line)
+          (folded_line)
+          (folded_line)
+          (escape_line)
+          (folded_line)
+          (folded_line))))

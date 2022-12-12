@@ -1,0 +1,43 @@
+============================================
+Comments
+============================================
+#comment 1
+A: B
+C: D d
+#inline comment
+key: value
+
+
+#floating comment
+
+K: L l
+
+#TAG: "key" confusing comment
+
+# comment with a space at the beginning
+---
+
+(source
+    (comment)
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+            (comment)
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (comment))
+    (paragraph
+        (statement
+          (simple_line
+            (field_name)
+            (field_value)))
+        (comment))
+    (comment))
