@@ -43,12 +43,31 @@
       "type": "PATTERN",
       "value": "[ \\t]+"
     },
-    "statement": {
+    "paragraph": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "statement"
+          }
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_separator_line"
+          }
+        }
+      ]
+    },
+    "field_value": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "simple_line"
+          "name": "simple_value"
         },
         {
           "type": "REPEAT",
@@ -68,26 +87,7 @@
         }
       ]
     },
-    "paragraph": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "REPEAT1",
-          "content": {
-            "type": "SYMBOL",
-            "name": "statement"
-          }
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_separator_line"
-          }
-        }
-      ]
-    },
-    "simple_line": {
+    "statement": {
       "type": "SEQ",
       "members": [
         {
@@ -112,11 +112,8 @@
       ]
     },
     "_separator_line": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "([ \\t]+|\\n)\\n"
-      }
+      "type": "PATTERN",
+      "value": "\\n[ \\t]*\\n"
     },
     "comment": {
       "type": "TOKEN",
@@ -134,7 +131,7 @@
         ]
       }
     },
-    "field_value": {
+    "simple_value": {
       "type": "PATTERN",
       "value": ".*"
     }
