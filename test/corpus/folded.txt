@@ -18,19 +18,25 @@ Key2: Line 1
 (source
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value))
-          (folded_line)
-          (folded_line)
-          (folded_line))
+          (field_name)
+          (field_value
+            (simple_value)
+            (folded_line)
+            (folded_line)
+            (folded_line)
+          )
+        )
         (statement
-          (simple_line
-            (field_name)
-            (field_value))
-          (escape_line)
-          (folded_line)
-          (folded_line)
-          (escape_line)
-          (folded_line)
-          (folded_line))))
+          (field_name)
+          (field_value
+            (simple_value)
+            (escape_line)
+            (folded_line)
+            (folded_line)
+            (escape_line)
+            (folded_line)
+            (folded_line)
+          )
+        )
+    )
+)

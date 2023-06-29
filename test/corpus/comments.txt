@@ -21,23 +21,19 @@ K: L l
     (comment)
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
-            (comment)
+          (field_name)
+          (field_value (simple_value)))
+          (comment)
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value (simple_value)))
         (comment))
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value (simple_value)))
         (comment))
     (comment))

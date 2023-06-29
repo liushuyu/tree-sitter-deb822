@@ -13,19 +13,18 @@ K: F
 (source
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value))))
+          (field_name)
+          (field_value
+            (simple_value))))
     (paragraph
-        (statement
-          (simple_line
-            (field_name)
-            (field_value)))))
+          (field_name)
+          (field_value
+            (simple_value))))

@@ -14,26 +14,25 @@ no_space!:nospace!!
     (comment)
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (comment)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))))
+          (field_name)
+          (field_value
+            (simple_value)))))
 
 
 ============================================
@@ -54,16 +53,16 @@ Key: Line 1
     (comment)
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value))
+          (field_name)
+          (field_value
+            (simple_value)
           (comment)
           (folded_line)
           (folded_line)
           (comment)
           (escape_line)
           (comment)
-          (folded_line))))
+          (folded_line)))))
 
 
 ============================================
@@ -81,10 +80,10 @@ key2: Unicode 13 (emoji):🧋
     (comment)
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))
+          (field_name)
+          (field_value
+            (simple_value)))
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))))
+          (field_name)
+          (field_value
+            (simple_value)))))

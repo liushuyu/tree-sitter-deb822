@@ -27,17 +27,17 @@ Bad key name
     (field_name))
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value))))
+          (field_name)
+          (field_value
+            (simple_value))))
     (comment)
       (ERROR
         (UNEXPECTED '-'))
       (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))))
+          (field_name)
+          (field_value
+            (simple_value)))))
 
 ============================================
 Bad folded line
@@ -51,17 +51,17 @@ recover_now: line 2 1
 (source
     (paragraph
         (statement
-          (simple_line
+          (field_value
             (field_name)
-            (field_value))))
+            (simple_value))))
     (ERROR
     (field_name)
     (field_name))
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value)))))
+          (field_name)
+          (field_value
+            (simple_value)))))
 
 ============================================
 Bad escaped line
@@ -77,14 +77,14 @@ recover_now: yes
 (source
     (paragraph
         (statement
-          (simple_line
-            (field_name)
-            (field_value))))
+          (field_name)
+          (field_value
+            (simple_value))))
     (paragraph
         (statement
-          (simple_line
-            (field_name)
+          (field_name)
+          (field_value
             (ERROR
               (field_name))
-            (field_value))))
+            (simple_value))))
       (comment))
