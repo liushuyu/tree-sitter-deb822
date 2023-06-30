@@ -3,6 +3,7 @@ module.exports = grammar({
   extras: ($) => [$.comment, "\n"],
   conflicts: ($) => [[$.paragraph]],
   word: ($) => $.field_name,
+  externals: ($) => [$._separator_line, $.comment, $.simple_value],
   rules: {
     source: ($) => repeat($.paragraph),
     escape_line: ($) => seq($._hspace, "."),
@@ -12,10 +13,6 @@ module.exports = grammar({
     paragraph: ($) => seq(repeat1($.statement), repeat1($._separator_line)),
     field_value: ($) =>
       seq($.simple_value, repeat(choice($.escape_line, $.folded_line))),
-    statement: ($) => seq($.field_name, ":", token(/\s*/), $.field_value),
-    _separator_line: ($) => /\n[ \t]*\n/,
-    comment: ($) => token(seq("#", /.*/)),
-    // catch-all
-    simple_value: ($) => /.*/,
+    statement: ($) => seq($.field_name, ":", /\s*/, $.field_value),
   },
 });

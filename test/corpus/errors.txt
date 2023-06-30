@@ -24,20 +24,11 @@ Bad key name
 (source
     (comment)
     (ERROR
-    (field_name))
-    (paragraph
-        (statement
-          (field_name)
-          (field_value
-            (simple_value))))
-    (comment)
-      (ERROR
-        (UNEXPECTED '-'))
-      (paragraph
-        (statement
-          (field_name)
-          (field_value
-            (simple_value)))))
+        (field_name)
+        (simple_value)
+        (comment)
+        (UNEXPECTED '-')
+        (simple_value)))
 
 ============================================
 Bad folded line
@@ -51,13 +42,12 @@ recover_now: line 2 1
 (source
     (paragraph
         (statement
+          (field_name)
           (field_value
-            (field_name)
-            (simple_value))))
-    (ERROR
-    (field_name)
-    (field_name))
-    (paragraph
+            (simple_value)))
+        (ERROR
+          (field_name)
+          (simple_value))
         (statement
           (field_name)
           (field_value
@@ -79,12 +69,11 @@ recover_now: yes
         (statement
           (field_name)
           (field_value
-            (simple_value))))
-    (paragraph
+            (simple_value)))
+        (ERROR
+          (field_name))
         (statement
           (field_name)
           (field_value
-            (ERROR
-              (field_name))
-            (simple_value))))
-      (comment))
+            (simple_value)))
+        (comment)))

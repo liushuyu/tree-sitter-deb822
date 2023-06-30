@@ -99,41 +99,14 @@
           "value": ":"
         },
         {
-          "type": "TOKEN",
-          "content": {
-            "type": "PATTERN",
-            "value": "\\s*"
-          }
+          "type": "PATTERN",
+          "value": "\\s*"
         },
         {
           "type": "SYMBOL",
           "name": "field_value"
         }
       ]
-    },
-    "_separator_line": {
-      "type": "PATTERN",
-      "value": "\\n[ \\t]*\\n"
-    },
-    "comment": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "#"
-          },
-          {
-            "type": "PATTERN",
-            "value": ".*"
-          }
-        ]
-      }
-    },
-    "simple_value": {
-      "type": "PATTERN",
-      "value": ".*"
     }
   },
   "extras": [
@@ -152,7 +125,20 @@
     ]
   ],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "_separator_line"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "simple_value"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }
