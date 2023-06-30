@@ -21,7 +21,7 @@ void tree_sitter_deb822_external_scanner_deserialize(void *payload,
                                                      const char *buffer,
                                                      unsigned length) {}
 
-inline void take_until_new_line(TSLexer *lexer) {
+void take_until_new_line(TSLexer *lexer) {
   while (!lexer->eof(lexer) && lexer->lookahead != '\n') {
     lexer->advance(lexer, false);
   }
