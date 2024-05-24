@@ -35,6 +35,8 @@ bool tree_sitter_deb822_external_scanner_scan(void *payload, TSLexer *lexer,
     while (!lexer->eof(lexer)) {
       lexer->advance(lexer, true);
       int32_t ch = lexer->lookahead;
+      if (valid_separator)
+        return true;
       switch (ch) {
       case ' ':
       case '\t':
@@ -48,8 +50,7 @@ bool tree_sitter_deb822_external_scanner_scan(void *payload, TSLexer *lexer,
         lexer->mark_end(lexer);
         return true;
       case '\0':
-        if (valid_separator)
-          return true;
+        return true;
       }
       return false;
     }
