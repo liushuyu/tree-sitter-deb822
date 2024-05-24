@@ -2,12 +2,23 @@
   "name": "tree-sitter-deb822",
   "version": "0.2.1",
   "main": "bindings/node",
+  "types": "bindings/node",
   "license": "MIT",
   "dependencies": {
-    "nan": "^2.17.0"
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.7"
+    "tree-sitter-cli": "^0.20.7",
+    "prebuildify": "^6.0.0"
   },
   "tree-sitter": [
     {
@@ -20,5 +31,17 @@
       ],
       "content-regex": "(Architectures|Components|Package|Upstream-Name): "
     }
+  ],
+  "scripts": {
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
   ]
 }
