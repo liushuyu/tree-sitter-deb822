@@ -21,7 +21,7 @@ void tree_sitter_deb822_external_scanner_deserialize(void *payload,
                                                      const char *buffer,
                                                      unsigned length) {}
 
-void take_until_new_line(TSLexer *lexer) {
+static inline void take_until_new_line(TSLexer *lexer) {
   while (!lexer->eof(lexer) && lexer->lookahead != '\n') {
     lexer->advance(lexer, false);
   }
@@ -35,18 +35,21 @@ bool tree_sitter_deb822_external_scanner_scan(void *payload, TSLexer *lexer,
     while (!lexer->eof(lexer)) {
       lexer->advance(lexer, true);
       int32_t ch = lexer->lookahead;
-      if (ch == ' ' || ch == '\t') {
+      switch (ch) {
+      case ' ':
+      case '\t':
         continue;
-      } else if (ch == '\n') {
+      case '\n':
         valid_separator = true;
         continue;
-      } else if (ch == '\0' || valid_separator) {
-        return true;
-      } else if (ch == '#') {
+      case '#':
         lexer->result_symbol = TOKEN_COMMENT;
         take_until_new_line(lexer);
         lexer->mark_end(lexer);
         return true;
+      case '\0':
+        if (valid_separator)
+          return true;
       }
       return false;
     }
