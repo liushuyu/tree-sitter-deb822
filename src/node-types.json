@@ -1,5 +1,10 @@
 [
   {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "escape_line",
     "named": true,
     "fields": {}
@@ -48,6 +53,11 @@
     }
   },
   {
+    "type": "simple_value",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source",
     "named": true,
     "fields": {},
@@ -82,6 +92,10 @@
     }
   },
   {
+    "type": "#",
+    "named": false
+  },
+  {
     "type": ".",
     "named": false
   },
@@ -90,15 +104,7 @@
     "named": false
   },
   {
-    "type": "comment",
-    "named": true
-  },
-  {
     "type": "field_name",
-    "named": true
-  },
-  {
-    "type": "simple_value",
     "named": true
   }
 ]

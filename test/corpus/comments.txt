@@ -3,7 +3,7 @@ Comments
 ============================================
 #comment 1
 A: B
-C: D d
+C: D d #not comment
 #inline comment
 key: value
 

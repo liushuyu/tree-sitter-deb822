@@ -64,6 +64,29 @@ Key: Line 1
           (comment)
           (folded_line)))))
 
+============================================
+Empty values
+============================================
+Key:
+Key2: 
+Key3:
+
+---
+(source
+  (paragraph
+    (statement
+      (field_name)
+      (field_value
+        (simple_value)))
+    (statement
+      (field_name)
+      (field_value
+        (simple_value)))
+    (statement
+      (field_name)
+      (field_value
+        (simple_value)))))
+
 
 ============================================
 Unicode
