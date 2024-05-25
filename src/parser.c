@@ -7,10 +7,10 @@
 #define LANGUAGE_VERSION 14
 #define STATE_COUNT 26
 #define LARGE_STATE_COUNT 2
-#define SYMBOL_COUNT 24
+#define SYMBOL_COUNT 22
 #define ALIAS_COUNT 0
-#define TOKEN_COUNT 12
-#define EXTERNAL_TOKEN_COUNT 3
+#define TOKEN_COUNT 10
+#define EXTERNAL_TOKEN_COUNT 1
 #define FIELD_COUNT 0
 #define MAX_ALIAS_SEQUENCE_LENGTH 4
 #define PRODUCTION_ID_COUNT 1
@@ -25,20 +25,18 @@ enum ts_symbol_identifiers {
   anon_sym_COLON = 7,
   aux_sym_statement_token1 = 8,
   sym__separator_line = 9,
-  sym__comment = 10,
-  sym__simple_value = 11,
-  sym_source = 12,
-  sym_escape_line = 13,
-  sym_folded_line = 14,
-  sym_comment = 15,
-  sym_paragraph = 16,
-  sym_simple_value = 17,
-  sym_field_value = 18,
-  sym_statement = 19,
-  aux_sym_source_repeat1 = 20,
-  aux_sym_paragraph_repeat1 = 21,
-  aux_sym_paragraph_repeat2 = 22,
-  aux_sym_field_value_repeat1 = 23,
+  sym_source = 10,
+  sym_escape_line = 11,
+  sym_folded_line = 12,
+  sym_comment = 13,
+  sym_paragraph = 14,
+  sym_simple_value = 15,
+  sym_field_value = 16,
+  sym_statement = 17,
+  aux_sym_source_repeat1 = 18,
+  aux_sym_paragraph_repeat1 = 19,
+  aux_sym_paragraph_repeat2 = 20,
+  aux_sym_field_value_repeat1 = 21,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -52,8 +50,6 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_COLON] = ":",
   [aux_sym_statement_token1] = "statement_token1",
   [sym__separator_line] = "_separator_line",
-  [sym__comment] = "_comment",
-  [sym__simple_value] = "_simple_value",
   [sym_source] = "source",
   [sym_escape_line] = "escape_line",
   [sym_folded_line] = "folded_line",
@@ -79,8 +75,6 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_COLON] = anon_sym_COLON,
   [aux_sym_statement_token1] = aux_sym_statement_token1,
   [sym__separator_line] = sym__separator_line,
-  [sym__comment] = sym__comment,
-  [sym__simple_value] = sym__simple_value,
   [sym_source] = sym_source,
   [sym_escape_line] = sym_escape_line,
   [sym_folded_line] = sym_folded_line,
@@ -133,14 +127,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [sym__separator_line] = {
-    .visible = false,
-    .named = true,
-  },
-  [sym__comment] = {
-    .visible = false,
-    .named = true,
-  },
-  [sym__simple_value] = {
     .visible = false,
     .named = true,
   },
@@ -343,23 +329,23 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0, .external_lex_state = 1},
   [1] = {.lex_state = 2},
   [2] = {.lex_state = 2},
-  [3] = {.lex_state = 2, .external_lex_state = 2},
-  [4] = {.lex_state = 2, .external_lex_state = 2},
-  [5] = {.lex_state = 2, .external_lex_state = 2},
+  [3] = {.lex_state = 2, .external_lex_state = 1},
+  [4] = {.lex_state = 2, .external_lex_state = 1},
+  [5] = {.lex_state = 2, .external_lex_state = 1},
   [6] = {.lex_state = 2},
-  [7] = {.lex_state = 2, .external_lex_state = 2},
-  [8] = {.lex_state = 2, .external_lex_state = 2},
-  [9] = {.lex_state = 2, .external_lex_state = 2},
-  [10] = {.lex_state = 2, .external_lex_state = 2},
-  [11] = {.lex_state = 2, .external_lex_state = 2},
+  [7] = {.lex_state = 2, .external_lex_state = 1},
+  [8] = {.lex_state = 2, .external_lex_state = 1},
+  [9] = {.lex_state = 2, .external_lex_state = 1},
+  [10] = {.lex_state = 2, .external_lex_state = 1},
+  [11] = {.lex_state = 2, .external_lex_state = 1},
   [12] = {.lex_state = 11},
-  [13] = {.lex_state = 2, .external_lex_state = 2},
-  [14] = {.lex_state = 2, .external_lex_state = 2},
-  [15] = {.lex_state = 2, .external_lex_state = 2},
-  [16] = {.lex_state = 2, .external_lex_state = 2},
-  [17] = {.lex_state = 2, .external_lex_state = 2},
+  [13] = {.lex_state = 2, .external_lex_state = 1},
+  [14] = {.lex_state = 2, .external_lex_state = 1},
+  [15] = {.lex_state = 2, .external_lex_state = 1},
+  [16] = {.lex_state = 2, .external_lex_state = 1},
+  [17] = {.lex_state = 2, .external_lex_state = 1},
   [18] = {.lex_state = 2},
-  [19] = {.lex_state = 2, .external_lex_state = 2},
+  [19] = {.lex_state = 2, .external_lex_state = 1},
   [20] = {.lex_state = 1},
   [21] = {.lex_state = 15},
   [22] = {.lex_state = 11},
@@ -378,8 +364,6 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [sym__hspace] = ACTIONS(1),
     [anon_sym_COLON] = ACTIONS(1),
     [sym__separator_line] = ACTIONS(1),
-    [sym__comment] = ACTIONS(1),
-    [sym__simple_value] = ACTIONS(1),
   },
   [1] = {
     [sym_source] = STATE(23),
@@ -712,23 +696,14 @@ static const TSParseActionEntry ts_parse_actions[] = {
 
 enum ts_external_scanner_symbol_identifiers {
   ts_external_token__separator_line = 0,
-  ts_external_token__comment = 1,
-  ts_external_token__simple_value = 2,
 };
 
 static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
   [ts_external_token__separator_line] = sym__separator_line,
-  [ts_external_token__comment] = sym__comment,
-  [ts_external_token__simple_value] = sym__simple_value,
 };
 
-static const bool ts_external_scanner_states[3][EXTERNAL_TOKEN_COUNT] = {
+static const bool ts_external_scanner_states[2][EXTERNAL_TOKEN_COUNT] = {
   [1] = {
-    [ts_external_token__separator_line] = true,
-    [ts_external_token__comment] = true,
-    [ts_external_token__simple_value] = true,
-  },
-  [2] = {
     [ts_external_token__separator_line] = true,
   },
 };

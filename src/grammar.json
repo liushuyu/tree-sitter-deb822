@@ -142,14 +142,6 @@
     {
       "type": "SYMBOL",
       "name": "_separator_line"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "_comment"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "_simple_value"
     }
   ],
   "inline": [],
