@@ -4,7 +4,7 @@
 //! tree-sitter [Parser][], and then use the parser to parse some code:
 //!
 //! ```
-//! let code = "";
+//! let code = "Key: Value\n";
 //! let mut parser = tree_sitter::Parser::new();
 //! parser.set_language(tree_sitter_deb822::language()).expect("Error loading deb822 grammar");
 //! let tree = parser.parse(code, None).unwrap();
@@ -35,7 +35,7 @@ pub const NODE_TYPES: &'static str = include_str!("../../src/node-types.json");
 
 // Uncomment these to include any queries that this grammar contains
 
-// pub const HIGHLIGHTS_QUERY: &'static str = include_str!("../../queries/highlights.scm");
+pub const HIGHLIGHTS_QUERY: &'static str = include_str!("../../queries/highlights.scm");
 // pub const INJECTIONS_QUERY: &'static str = include_str!("../../queries/injections.scm");
 // pub const LOCALS_QUERY: &'static str = include_str!("../../queries/locals.scm");
 // pub const TAGS_QUERY: &'static str = include_str!("../../queries/tags.scm");
@@ -46,7 +46,7 @@ mod tests {
     fn test_can_load_grammar() {
         let mut parser = tree_sitter::Parser::new();
         parser
-            .set_language(super::language())
+            .set_language(&super::language())
             .expect("Error loading deb822 language");
     }
 }
