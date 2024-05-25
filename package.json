@@ -5,8 +5,8 @@
   "types": "bindings/node",
   "license": "MIT",
   "dependencies": {
-    "node-addon-api": "^7.1.0",
-    "node-gyp-build": "^4.8.0"
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.1"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.0"
@@ -17,8 +17,8 @@
     }
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.7",
-    "prebuildify": "^6.0.0"
+    "tree-sitter-cli": "^0.22.6",
+    "prebuildify": "^6.0.1"
   },
   "tree-sitter": [
     {
