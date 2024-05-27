@@ -12,5 +12,13 @@ log.html
 
 *.wasm
 
+# build artifacts
+*.o
+*.obj
 *.so
+*.a
 *.dll
+*.pc
+
+# ignored files for language-bindings
+/bindings/go/vendor
