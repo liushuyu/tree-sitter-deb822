@@ -1,4 +1,4 @@
-module github.com/liushuyu/tree-sitter-deb822
+module github.com/liushuyu/tree-sitter-deb822/bindings/go
 
 go 1.22
 
