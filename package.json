@@ -4,6 +4,21 @@
   "main": "bindings/node",
   "types": "bindings/node",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liushuyu/tree-sitter-deb822.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "lexer",
+    "dpkg",
+    "grammar",
+    "deb822"
+  ],
+  "bugs": {
+    "url": "https://github.com/liushuyu/tree-sitter-deb822/issues"
+  },
   "dependencies": {
     "node-addon-api": "^8.0.0",
     "node-gyp-build": "^4.8.1"
@@ -24,12 +39,13 @@
     {
       "scope": "source.conf",
       "file-types": [
-        "conf"
+        "conf",
+        "sources"
       ],
       "highlights": [
         "queries/highlights.scm"
       ],
-      "content-regex": "(Architectures|Components|Package|Upstream-Name): "
+      "content-regex": "^(Architectures|Components|Package|Upstream-Name|Signed-By): "
     }
   ],
   "scripts": {
