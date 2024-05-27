@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-deb822",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "bindings/node",
   "types": "bindings/node",
   "license": "MIT",
