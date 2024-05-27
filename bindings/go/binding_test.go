@@ -3,8 +3,8 @@ package tree_sitter_deb822_test
 import (
 	"testing"
 
+	tree_sitter_deb822 "github.com/liushuyu/tree-sitter-deb822"
 	tree_sitter "github.com/smacker/go-tree-sitter"
-	"github.com/tree-sitter/tree-sitter-deb822"
 )
 
 func TestCanLoadGrammar(t *testing.T) {
