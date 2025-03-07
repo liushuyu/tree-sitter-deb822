@@ -20,8 +20,8 @@
     "url": "https://github.com/liushuyu/tree-sitter-deb822/issues"
   },
   "dependencies": {
-    "node-addon-api": "^8.0.0",
-    "node-gyp-build": "^4.8.1"
+    "node-addon-api": "^8.3.1",
+    "node-gyp-build": "^4.8.4"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.0"
@@ -32,8 +32,8 @@
     }
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.22.6",
-    "prebuildify": "^6.0.1"
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "^0.25.3"
   },
   "tree-sitter": [
     {
