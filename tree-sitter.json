@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "deb822",
+      "camelcase": "Deb822",
+      "title": "Deb822",
+      "scope": "source.conf",
+      "file-types": [
+        "conf",
+        "sources"
+      ],
+      "injection-regex": "^deb822$",
+      "class-name": "TreeSitterDeb822"
+    }
+  ],
+  "metadata": {
+    "version": "0.3.0",
+    "license": "MIT",
+    "description": "Deb822 grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "liushuyu",
+        "email": "liushuyu011@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/liushuyu/tree-sitter-deb822.git"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
