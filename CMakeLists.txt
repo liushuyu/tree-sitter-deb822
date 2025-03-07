@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-deb822
-        VERSION "0.3.0"
+        VERSION "0.4.0"
         DESCRIPTION "Deb822 grammar for tree-sitter"
         HOMEPAGE_URL "https://github.com/liushuyu/tree-sitter-deb822.git"
         LANGUAGES C)
